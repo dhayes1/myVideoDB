@@ -1,0 +1,25 @@
+<!Doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css" href="style/styles.css"></style>
+        <title>My Video Database</title>
+    </head>
+
+    <body>
+        <div>
+            <h2>My Video Database</h2>
+            <input class="input" id="input-title" type="text" placeholder="Enter Title" name="txtSearch">
+            <select class="input dropdown" id="input-type">
+                <option value="movie">movie</option>
+                <option value="series">series</option>
+            </select>
+            <select class="input dropdown pages" id="input-pages"></select>
+            <button class="button" id="button-search" type="button" name="btnSearch">Search</button>
+        </div>
+        <div class="movie-list-container"></div>
+    </body>
+
+    <script type="module" src="js/main.js"></script>
+</html>
