@@ -1,8 +1,6 @@
 import { createMovieElement } from './elements.js';
 
 let videosArray = [];
-let videoArray = [];
-let returnResults = 0;
 
 const search = document.querySelector('#button-search');
 search.addEventListener('click', findVideos);
