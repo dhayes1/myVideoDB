@@ -1,4 +1,4 @@
-import { createMovieElement } from './elements.js';
+import { displayMovieDetails } from './elements.js';
 
 let videosArray = [];
 
@@ -20,6 +20,8 @@ async function findVideos(pageNumber = 1) {
     console.log('Received video info!');
     console.log('Video info:');
     console.log(videosArray);
+
+    displayMovieDetails(videosArray);   
 }
 
 async function getVideos(api) {
@@ -37,13 +39,35 @@ async function getVideos(api) {
 
 async function getMovieInfo(videoArray) {
     let videoDetails = [];
+    
+    /*
     videoArray.forEach(async (video) => {
         let response = await fetch(`http://www.omdbapi.com/?apikey=7665b6fb&i=${video.imdbID}`); // promise
         let details = await response.json();
 
         //console.log(details);
         videoDetails.push(details);
-    })
+    });
+    */
+    /*
+    await videoArray.reduce(async (memo, video) => {
+        await memo;
+        let response = await fetch(`http://www.omdbapi.com/?apikey=7665b6fb&i=${video.imdbID}`); // promise
+        let details = await response.json();
+
+        //console.log(details);
+        videoDetails.push(details);
+    }, undefined);
+    */
+    
+    // get details of each video in the video array
+    for await (let video of videoArray) {
+        let response = await fetch(`http://www.omdbapi.com/?apikey=7665b6fb&i=${video.imdbID}`); // promise
+        let details = await response.json();
+
+        //console.log(details);
+        videoDetails.push(details);
+    }
 
     console.log('Publishing video details!');
     //console.log(videoDetails);
