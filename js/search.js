@@ -26,7 +26,7 @@ async function searchForVideos(pageNumber) {
     const type = 'movie';
 
     // api string
-    const api = `http://www.omdbapi.com/?apikey=7665b6fb&s=${title}&type=${type}&page=${pageNumber}`;
+    const api = `https://www.omdbapi.com/?apikey=7665b6fb&s=${title}&type=${type}&page=${pageNumber}`;
 
     // create an empty array for storing search results
     let searchResults = [];
@@ -65,7 +65,7 @@ async function getSearchDetails(videoArray) {
     
     // get details of each video in the video array
     for await (let video of videoArray) {
-        let result = await fetch(`http://www.omdbapi.com/?apikey=7665b6fb&i=${video.imdbID}`); // promise
+        let result = await fetch(`https://www.omdbapi.com/?apikey=7665b6fb&i=${video.imdbID}`); // promise
         let resultData = await result.json();
 
         //console.log(details);
@@ -77,7 +77,7 @@ async function getSearchDetails(videoArray) {
 }
 
 async function getVideoDetails(videoID) {
-    const result = await fetch(`http://www.omdbapi.com/?apikey=7665b6fb&i=${videoID}`); // promise
+    const result = await fetch(`https://www.omdbapi.com/?apikey=7665b6fb&i=${videoID}`); // promise
     const resultData = await result.json();
 
     //console.log(resultData);
