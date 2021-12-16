@@ -43,18 +43,18 @@ body {
 }
 
 .button-settings {
-    background: url(/assets/settings-gears-svgrepo-com.svg);
+    background: url('../assets/settings-gears-svgrepo-com.svg');
     background-size: 32px 32px;
     margin-left: 10px;
 }
 
 .button-filter {
-    background: url(/assets/settings-adjust-svgrepo-com.svg);
+    background: url('../assets/settings-adjust-svgrepo-com.svg');
     background-size: 32px 32px;
 }
 
 .button-lists {
-    background: url(/assets/list-svgrepo-com.svg);
+    background: url('../assets/list-svgrepo-com.svg');
     background-size: 32px 32px;
     margin-right: 10px;
 }
@@ -77,7 +77,7 @@ body {
     border-radius: 0 15px 15px 0;
     border: 1px solid black;
     border-left: none;
-    background-image: url(/assets/magnifying-glass-svgrepo-com.svg);
+    background-image: url('../assets/magnifying-glass-svgrepo-com.svg');
     background-size: 18px 18px;
     background-repeat: no-repeat;
     background-position: 5px 5px;
@@ -85,14 +85,14 @@ body {
 }
 
 .button-save {
-    background-image: url(/assets/save-svgrepo-com.svg);
+    background-image: url('../assets/save-svgrepo-com.svg');
     background-size: 28px 28px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button-find {
-    background-image: url(/assets/magnifying-glass-svgrepo-com.svg);
+    background-image: url('../assets/magnifying-glass-svgrepo-com.svg');
     background-size: 28px 28px;
     background-repeat: no-repeat;
     background-position: center;
@@ -198,7 +198,7 @@ body {
 
 .button-back {
     border-radius: 16px 0 0 16px;
-    background-image: url(/assets/left-arrow-back-svgrepo-com.svg);
+    background-image: url('../assets/left-arrow-back-svgrepo-com.svg');
 }
 
 .display-pages {
@@ -215,6 +215,6 @@ body {
 
 .button-next {
     border-radius: 0 16px 16px 0;
-    background-image: url(/assets/right-arrow-next-svgrepo-com.svg);
+    background-image: url('../assets/right-arrow-next-svgrepo-com.svg');
 }
 
